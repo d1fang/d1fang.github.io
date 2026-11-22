@@ -36,3 +36,97 @@
     "layout/archive",
     "layout/sidebar"
 ;
+
+/* Compact headings for the personal portfolio. */
+.page__title,
+.page__content h2 {
+  font-size: 1.1rem;
+}
+
+.page__content h3 {
+  font-size: 1rem;
+}
+
+/* Keep contact details visible on mobile as well as desktop. */
+.author__urls {
+  display: block;
+  position: static;
+  z-index: auto;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.author__urls::before,
+.author__urls::after {
+  display: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding-bottom: 2rem;
+}
+
+.resume-entry {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  margin: 1.25rem 0;
+
+  h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .resume-entry__details {
+    margin-top: 0.15rem;
+    color: var(--global-text-color);
+    opacity: 0.75;
+    font-size: 0.875rem;
+    font-style: italic;
+  }
+}
+
+.resume-entry__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 4px;
+  padding: 8px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 56px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-entry {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+
+.sidebar .author__name {
+  margin-bottom: 1.25rem;
+}
+
+/* The wide UW signature needs more room than the compact wordmarks. */
+.resume-entry__logo--signature {
+  padding: 0;
+  margin-inline: -8px;
+}

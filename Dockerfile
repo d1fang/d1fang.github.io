@@ -4,9 +4,11 @@ FROM ruby:3.2
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
-    nodejs \
+    nodejs npm \
     && rm -rf /var/lib/apt/lists/*
 
+
+RUN npm install -g uglify-js
 
 # Create a non-root user with UID 1000
 RUN groupadd -g 1000 vscode && \
@@ -32,4 +34,4 @@ RUN gem install bundler:2.3.26
 RUN bundle install
 
 # Command to serve the Jekyll site
-CMD ["jekyll", "serve", "-H", "0.0.0.0", "-w", "--config", "_config.yml,_config_docker.yml"]
+CMD ["sh", "-c", "uglifyjs assets/js/plugins/jquery.greedy-navigation.js assets/js/_main.js -c -m -o assets/js/main.min.js && bundle exec jekyll serve -H 0.0.0.0 -w --config _config.yml,_config_docker.yml"]
