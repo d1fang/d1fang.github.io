@@ -131,7 +131,12 @@ body {
   margin-inline: -8px;
 }
 
-/* Keep role links consistent before and after visiting. */
+/* Extend the role link over its card without changing the grid layout. */
+.resume-entry {
+  position: relative;
+}
+
+/* Keep linked text consistent before and after visiting. */
 .page__content a.resume-entry__role-link {
   cursor: pointer;
   color: inherit;
@@ -145,7 +150,18 @@ body {
     text-decoration: none;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+  }
+
   &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::after {
     outline: 2px solid currentColor;
     outline-offset: 4px;
   }
