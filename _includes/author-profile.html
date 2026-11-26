@@ -2,6 +2,11 @@
   <div class="author__content">
     <h3 class="author__name" itemprop="name">{{ site.author.name }}</h3>
   </div>
+  {% if site.author.avatar %}
+  <div class="author__avatar">
+    <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name | escape }}" itemprop="image">
+  </div>
+  {% endif %}
   <ul class="author__urls social-icons">
     <li><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ site.author.location }}</li>
     <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>

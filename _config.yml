@@ -22,6 +22,7 @@ repository               : "d1fang/d1fang.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   name             : "Daniel Fang"
+  avatar           : "/files/Profile_2026.jpeg"
   location         : "Zurich, Switzerland"
   linkedin         : "daniel-yang-fang"
 
