@@ -25,6 +25,8 @@ author:
   avatar           : "/files/Profile_2026.jpeg"
   location         : "Zurich, Switzerland"
   linkedin         : "daniel-yang-fang"
+  github           : "PopoDev"
+  email            : "dafang@ethz.ch"
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

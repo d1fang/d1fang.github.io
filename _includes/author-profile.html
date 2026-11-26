@@ -1,14 +1,20 @@
 <div itemscope itemtype="https://schema.org/Person">
-  <div class="author__content">
-    <h3 class="author__name" itemprop="name">{{ site.author.name }}</h3>
-  </div>
   {% if site.author.avatar %}
   <div class="author__avatar">
     <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name | escape }}" itemprop="image">
   </div>
   {% endif %}
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">{{ site.author.name }}</h3>
+  </div>
   <ul class="author__urls social-icons">
     <li><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ site.author.location }}</li>
     <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
+    {% if site.author.github %}
+    <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+    {% endif %}
+    {% if site.author.email %}
+    <li><a href="mailto:{{ site.author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+    {% endif %}
   </ul>
 </div>
