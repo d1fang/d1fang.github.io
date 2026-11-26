@@ -2,6 +2,10 @@
 
 Personal portfolio at https://d1fang.github.io/, based on Academic Pages.
 
+## Adding content
+
+Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
+
 ## Running locally
 
 When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:

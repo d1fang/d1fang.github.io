@@ -25,6 +25,6 @@ My research interests lie in 3D computer vision and robotics, with a focus on sp
 
 ## Experience
 
-{% include resume-entry.html logo="/images/evulpo_logo.jpg" name="Evulpo" role="Machine Learning Intern" dates="2025.06 – 2025.10" %}
+{% include resume-entry.html logo="/images/evulpo_logo.jpg" name="Evulpo" url="https://evulpo.com/en/" role="Machine Learning Intern" dates="2025.06 – 2025.10" %}
 
-{% include resume-entry.html logo="/images/vozo_ai_logo.jpg" name="Vozo AI" role="Software Engineering Intern" dates="2024.06 – 2024.08" %}
+{% include resume-entry.html logo="/images/vozo_ai_logo.jpg" name="Vozo AI" url="https://www.vozo.ai/blinkcaptions" role="Software Engineering Intern" dates="2024.06 – 2024.08" %}
