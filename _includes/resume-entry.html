@@ -1,16 +1,8 @@
-{% if include.url %}
-<a class="resume-entry resume-entry--linked" href="{{ include.url | escape }}" target="_blank" rel="noopener noreferrer">
-{% else %}
 <div class="resume-entry">
-{% endif %}
   <div class="resume-entry__logo{% if include.logo_class %} {{ include.logo_class }}{% endif %}"><img src="{{ include.logo | relative_url }}" alt="" width="96" height="56"></div>
   <div>
     <h3>{{ include.name }}</h3>
-    <p>{{ include.role }}</p>
+    <p>{% if include.url %}<a class="resume-entry__role-link" href="{{ include.url | escape }}" target="_blank" rel="noopener noreferrer">{{ include.role }}</a>{% else %}{{ include.role }}{% endif %}</p>
     <p class="resume-entry__details">{{ include.dates }}{% if include.location %} | {{ include.location }}{% endif %}</p>
   </div>
-{% if include.url %}
-</a>
-{% else %}
 </div>
-{% endif %}
